@@ -35,9 +35,16 @@
                 margin: auto;
             }
     
-            .speakers-container {
+            /* .speakers-container {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                padding: 20px 0;
+            } */
+             .speakers-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                justify-content: center;
                 gap: 20px;
                 padding: 20px 0;
             }
@@ -116,7 +123,7 @@
                             <li><strong>End Time: </strong></li> -->
                             <li><strong>Location of the Event: </strong>Susan R. Holiday Center at the Sanders College of Business, Rochester Institute of Technology, 105 Lomb Memorial Dr, Rochester NY 14623</li>
                             <li><strong>Location of the Hotel: </strong>Holiday Inn Express located at 717 East Henrietta Rd Brighton NY 14623</li>
-                            <li><strong>Schedule: </strong></li>
+                            <li><strong>Schedule: </strong>Coming Soon!</li>
                             <!-- <li><strong>Transportation options: </strong></li> -->
                         </ul>
                     </nav>
