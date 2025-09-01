@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>RocCon</title> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0 20px;
+                background-color: #000000;
+            }
+    
+            header {
+                background-color: #f06b1f;
+                color: white;
+                padding: 20px;
+                margin-left: -20px;
+                margin-right: -20px;
+                text-align: center;
+            }
+    
+            h1, h3, h4 {
+                margin: 10px 0;
+            }
+
+            h3{
+                color: white;
+            }
+
+            main {
+                max-width: 1200px;
+                margin: auto;
+            }
+    
+            .speakers-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                padding: 20px 0;
+            }
+    
+            .speaker-card {
+                background-color: white;
+                border-radius: 8px;
+                padding: 15px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+    
+            .speaker-card img {
+                width: 100%;
+                height: auto;
+                max-height: 200px;
+                object-fit: cover;
+                border-radius: 6px;
+                margin: 10px 0;
+            }
+    
+            .speaker-card h4 {
+                font-size: 1.2em;
+                margin-bottom: 5px;
+            }
+    
+            .speaker-card p {
+                font-size: 0.95em;
+                color: #333;
+            }
+    
+            #important_info nav,
+            #fun_things nav,
+            #ticket_info nav,
+            #add_info nav{
+                margin-top: 10px;
+                background-color: #fff;
+                padding: 10px 15px;
+                border-radius: 6px;
+                box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            }
+            .fun-item {
+                margin-bottom: 20px;
+                padding-left: 10px;
+            }
+
+            .fun-detail {
+                margin: 2px 0 2px 20px;
+                color: #333;
+                font-size: 0.95em;
+            }
+    
+            /* Optional: make it responsive on smaller screens */
+            @media (max-width: 768px) {
+                .speakers-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to RocCon!</h1>
+        </header>
+        <main>
+
+            <section id="important_info">
+                <h3>Important Information</h3>
+                <p>
+                    <nav>
+                        <!-- <h4>Important Information:</h4> -->
+                        <ul style="list-style-type: none;">
+                            <li><strong>Date: </strong>November 21st - 23rd, 2025</li>
+                            <!-- <li><strong>Start Time: </strong></li>
+                            <li><strong>End Time: </strong></li> -->
+                            <li><strong>Location of the Event: </strong>Susan R. Holiday Center at the Sanders College of Business, Rochester Institute of Technology, 105 Lomb Memorial Dr, Rochester NY 14623</li>
+                            <li><strong>Location of the Hotel: </strong>Holiday Inn Express located at 717 East Henrietta Rd Brighton NY 14623</li>
+                            <li><strong>Schedule: </strong></li>
+                            <!-- <li><strong>Transportation options: </strong></li> -->
+                        </ul>
+                    </nav>
+                </p>
+            </section>
+
+            <section id="ticket_info">
+                <h3>Ticket Information</h3>
+                <p>
+                    <nav>
+                        <ul style="list-style-type: none;">
+                            <li><strong>Price: </strong> $125.70</li>
+                            <!-- <li><strong>Deadline to Purchase: </strong>Month Day, Year</li> -->
+                            <!-- <li><strong>Link: </strong> <a href="YOUR_TICKET_LINK_HERE" target="_blank" rel="noopener noreferrer">Buy Tickets Here</a></li> -->
+                        </ul>
+                    </nav>
+                </p>
+            </section>
+            
+            <section id="guest_speakers">
+                <h3>Meet the Keynote Speaker!</h3>
+                <div class="speakers-container">
+                    <div class="speaker-card">
+                        <h4><strong>Brigadier General Gary R. Carlton II</strong></h4>
+                        <!-- <img src="guest_speaker_images/name1.jpg" alt="Speaker 1"> -->
+                         <p><a href="https://www.nationalguard.mil/portals/31/Features/ngbgomo/bio/4/4107.html">Link to his biography</a></p>
+                        <p>Brig. Gen. Gary Charlton is the Assistant Adjutant General for the New York Air National Guard, overseeing over 5,800 personnel and operations across five wings and the Eastern Air Defense Sector. He began his military career in 1990 as an enlisted Fuels Systems Technician and commissioned in 2000, later becoming an F-16C pilot. A seasoned leader and combat veteran, he has held multiple command roles and completed eleven deployments. He holds a Master’s in Military Studies and has logged over 3,500 flight hours in various aircraft.</p>
+                    </div>
+                    <!-- Unknown if more speakers will be added, just the keynote for now, change keynote to guest speakers-->
+                    <!-- <div class="speaker-card">
+                        <h4>Enter Name 2</h4>
+                        <img src="guest_speaker_images/name2.jpg" alt="Speaker 2">
+                        <p>Small bio of the person, add links to gain more information, what they are talking about, etc.</p>
+                    </div>
+                    <div class="speaker-card">
+                        <h4>Enter Name 3</h4>
+                        <img src="guest_speaker_images/name3.jpg" alt="Speaker 3">
+                        <p>Small bio of the person, add links to gain more information, what they are talking about, etc.</p>
+                    </div> -->
+                    <!-- Add more speaker cards here -->
+                </div>
+            </section>
+            <section id="fun_things">
+                <h3>Fun Things To Do</h3>
+                <nav>
+                    <!-- <h4>Activities</h4> -->
+                    <div class="fun-item">
+                        <p><strong>Name:</strong> Mission BBQ</p>
+                        <p class="fun-detail">Description: "BBQ is their Mission" - C/Hutson</p>
+                        <p class="fun-detail">Distance: 2.3 miles</p>
+                    </div>
+                    <!-- <div class="fun-item">
+                        <p><strong>Name:</strong> Galaxy Arcade</p>
+                        <p class="fun-detail">Description: Retro and modern arcade games with food and drinks.</p>
+                        <p class="fun-detail">Distance: 0.7 miles</p>
+                    </div>
+                    <div class="fun-item">
+                        <p><strong>Name:</strong> Downtown Comics Market</p>
+                        <p class="fun-detail">Description: Local vendors, rare comics, and artist meet-and-greets.</p>
+                        <p class="fun-detail">Distance: 1.8 miles</p>
+                    </div> -->
+                </nav>
+            </section>
+            <section id="add_info">
+                <h3>Additional Information</h3>
+                <nav>
+                    <div class="fun-item">
+                        <p><strong>Co-commanders:</strong> Aronald Air Society (AAS) Cadet Lieutenant Colonel Hutson and David Martin</p>
+                        <p class="fun-detail">Email Addresses: [Add info here]</p>
+                    </div>
+                    <div class="fun-item">
+                        <p><strong>Welcome Packet: </strong> [Add link here]</p>
+                    </div>
+                    <div class="fun-item">
+                        <p><strong>Packing List: </strong> [Add link here]</p>
+                    </div>
+                </nav>
+            </section>
+        </main>
+    </body>
+</html>
+<!-- Add email to the co-commanders for any questions
+ link to schedule, welcome packet, packing list -->

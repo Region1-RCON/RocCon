@@ -1,0 +1,12 @@
+- Color for the background
+- logo
+- Important info (Dates, times, locations)
+- Ticket purchase locations
+- Guest speakers / Schedule
+- Fun things to do (add average price per event)
+- Why come to RocCon
+- Merch page
+- Met the staff?
+- Social media links
+- Timer/countdown to when RocCon Starts
+- Avoid extra pages if possible
