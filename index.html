@@ -5,15 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="aas.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Montserrat', Arial, sans-serif;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+            font-weight: 600;
             margin: 0;
             padding: 0 20px;
             background: #F4F6F8;
             color: #232526;
+        }
+
+        header h1 {
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-weight: 600;
         }
 
         .logo {
@@ -91,12 +99,12 @@
         nav a {
             color: #C8102E;
             text-decoration: none;
-            margin: 0 34px;
-            font-weight: 650;
-            font-size: 1.4em;
+            /*margin: 0 34px;*/
+            /*!*font-weight: 650;*!*/
+            /*!*font-size: 1.4em;*!*/
             transition: color 0.2s;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 1px;
+            /*border-bottom: 2px solid transparent;*/
+            /*padding-bottom: 1px;*/
         }
 
         nav a:hover {
@@ -121,7 +129,6 @@
             text-decoration: underline;
         }
 
-
         .speakers-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -144,8 +151,9 @@
         }
 
         .speaker-card h4 {
-            font-size: 1.25em;
-            margin-bottom: 8px;
+            font-size: 2em;
+            margin-top: -6px;
+            margin-bottom: 24px;
             color: #C8102E;
         }
 
@@ -157,6 +165,8 @@
         #important_info nav,
         #fun_things nav,
         #ticket_info nav,
+        #schedule nav,
+        #staff nav,
         #add_info nav {
             margin-top: 10px;
             background: #F8F8F8;
@@ -208,13 +218,13 @@
     <img src="det538.png" alt="RIT Logo" class="logo-right2">
     <h1>RocCon</h1>
     <span class="subtitle">AAS Region I RCON</span>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="staff.html">Staff</a>
-        <a href="speakers.html">Guest Speakers</a>
-        <a href="venue.html">Venue</a>
-        <a href="schedule.html">Schedule</a>
-    </nav>
+<!--    <nav>-->
+<!--        <a href="index.html">Home</a>-->
+<!--        <a href="staff.html">Staff</a>-->
+<!--        <a href="speakers.html">Guest Speakers</a>-->
+<!--        <a href="venue.html">Venue</a>-->
+<!--        <a href="schedule.html">Schedule</a>-->
+<!--    </nav>-->
 </header>
 <main>
     <section id="important_info">
@@ -222,32 +232,39 @@
         <nav>
             <ul style="list-style-type: none;">
                 <li><strong>Date:</strong> November 21st - 23rd, 2025</li>
-                <li><strong>Location of the Event:</strong> Susan R. Holliday Center at the Saunders College of Business, Rochester Institute of Technology, 105 Lomb Memorial Dr, Rochester, NY 14623</li>
-                <li><strong>Location of the Hotel:</strong> Holiday Inn Express located at 717 East Henrietta Rd, Brighton, NY 14623</li>
-                <li><strong>Schedule:</strong> Coming Soon!</li>
+                <li><strong>Event Location:</strong> Susan R. Holliday Center at the Saunders College of Business, Rochester Institute of Technology, 105 Lomb Memorial Dr, Rochester, NY 14623</li>
+                <li><strong>Hotel Location:</strong> Holiday Inn Express located at 717 East Henrietta Rd, Brighton, NY 14623</li>
             </ul>
         </nav>
     </section>
     <section id="ticket_info">
-        <h3>Ticket Information</h3>
+        <h3>Tickets</h3>
         <nav>
             <ul style="list-style-type: none;">
-                <li><strong>Price:</strong> Coming Soon!</li>
+                <li><strong>Coming soon!</strong></li>
             </ul>
         </nav>
     </section>
     <section id="guest_speakers">
-        <h3>Meet the Keynote Speaker!</h3>
+        <h3>Keynote Speaker</h3>
         <div class="speakers-container">
             <div class="speaker-card">
-                <h4><strong>Brigadier General Gary R. Carlton II</strong></h4>
-                <p><a href="https://www.nationalguard.mil/portals/31/Features/ngbgomo/bio/4/4107.html" style="color:#f06b1f;">Link to his biography</a></p>
-                <p>Brig. Gen. Gary Charlton is the Assistant Adjutant General for the New York Air National Guard, overseeing over 5,800 personnel and operations across five wings and the Eastern Air Defense Sector. He began his military career in 1990 as an enlisted Fuels Systems Technician and commissioned in 2000, later becoming an F-16C pilot. A seasoned leader and combat veteran, he has held multiple command roles and completed eleven deployments. He holds a Master’s in Military Studies and has logged over 3,500 flight hours in various aircraft.</p>
+                <h4><strong><u>Brigadier General Gary R. Charlton II</u></strong></h4>
+                <iframe src="BGCharlton_Biography.htm" width="100%" height="600px" style="border:none;"></iframe>
+<!--                <p>Brig. Gen. Gary Charlton is the Assistant Adjutant General for the New York Air National Guard, overseeing over 5,800 personnel and operations across five wings and the Eastern Air Defense Sector. He began his military career in 1990 as an enlisted Fuels Systems Technician and commissioned in 2000, later becoming an F-16C pilot. A seasoned leader and combat veteran, he has held multiple command roles and completed eleven deployments. He holds a Master’s in Military Studies and has logged over 3,500 flight hours in various aircraft.</p>-->
             </div>
         </div>
     </section>
+    <section id="schedule">
+        <h3>Schedule</h3>
+        <nav>
+            <ul style="list-style-type: none;">
+                <li><strong>Coming soon!</strong></li>
+            </ul>
+        </nav>
+    </section>
     <section id="fun_things">
-        <h3>Fun Things To Do</h3>
+        <h3>Local Attractions</h3>
         <nav>
             <div class="fun-item">
                 <p><strong>Name:</strong> Mission BBQ</p>
@@ -256,21 +273,101 @@
             </div>
         </nav>
     </section>
+    <section id="staff">
+        <h3>Staff</h3>
+        <div class="speaker-card">
+        <div class="venue-section">
+            <table style="width:100%; border-collapse:collapse;">
+                <tr>
+                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                        <strong>AAS Cadet Lieutenant Colonel Hutson</strong><br>
+                        <em>Position:</em> Co-Commander<br>
+                        <em>Hometown:</em> Pompey, NY<br>
+                        <em>Major:</em> Computer Science<br>
+                        <em>Fun Fact:</em> Aspiring pilot
+                    </td>
+                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                        <strong>Mister David Martin</strong><br>
+                        <em>Position:</em> Co-Commander<br>
+                        <em>Hometown:</em> Woodbridge, VA<br>
+                        <em>Major:</em> MBA<br>
+                        <em>Fun Fact:</em> Bikes or runs to school every day
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                        <strong>AAS Cadet Major Kettavong</strong><br>
+                        <em>Position:</em> Vice Commander<br>
+                        <em>Hometown:</em> TBD<br>
+                        <em>Major:</em> TBD<br>
+                        <em>Fun Fact:</em> TBD
+                    </td>
+                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                        <strong>Mister Zackery Krenzel</strong><br>
+                        <em>Position:</em> Director of Operations<br>
+                        <em>Hometown:</em> TBD<br>
+                        <em>Major:</em> TBD<br>
+                        <em>Fun Fact:</em> TBD
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                        <strong>AAS Cadet Major Natarajan</strong><br>
+                        <em>Position:</em> Director of Information Management<br>
+                        <em>Hometown:</em> TBD<br>
+                        <em>Major:</em> TBD<br>
+                        <em>Fun Fact:</em> TBD
+                    </td>
+                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                        <strong>AAS Cadet Captain Nammalver</strong><br>
+                        <em>Position:</em> Director of Financial Management<br>
+                        <em>Hometown:</em> TBD<br>
+                        <em>Major:</em> TBD<br>
+                        <em>Fun Fact:</em> TBD
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                        <strong>Miss Emma Devens</strong><br>
+                        <em>Position:</em> Director of Public Affairs<br>
+                        <em>Hometown:</em> TBD<br>
+                        <em>Major:</em> TBD<br>
+                        <em>Fun Fact:</em> TBD
+                    </td>
+                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                        <strong>AAS Cadet Captain Reichmann</strong><br>
+                        <em>Position:</em> Director of Support<br>
+                        <em>Hometown:</em> TBD<br>
+                        <em>Major:</em> TBD<br>
+                        <em>Fun Fact:</em> TBD
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div>
+    </section>
+
+
+    <!--    <section id="venue">-->
+<!--        <h3>Venue</h3>-->
+<!--        <nav>-->
+<!--            <ul style="list-style-type: none;">-->
+<!--                <li><strong>Susan R. Holliday Center</strong></li>-->
+<!--                <li>Saunders College of Business, Rochester Institute of Technology</li>-->
+<!--                <li>105 Lomb Memorial Dr, Rochester, NY 14623</li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </section>-->
     <section id="add_info">
         <h3>Additional Information</h3>
         <nav>
             <div class="fun-item">
-                <p><strong>Co-commanders:</strong> Arnold Air Society (AAS) Cadet Lieutenant Colonel Hutson and Mr. David Martin</p>
-                <p class="fun-detail">Email Address: region1rcon@gmail.com</p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/reg1.rcon" target="_blank" rel="noopener noreferrer"><u>reg1.rcon</u></a></p>            </div>
+            <div class="fun-item">
+                <p><strong>Welcome Packet:</strong> Coming soon!</p>
             </div>
             <div class="fun-item">
-                <p><strong>Follow us on Instagram for Updates:</strong> reg1.rcon</p>
-            </div>
-            <div class="fun-item">
-                <p><strong>Welcome Packet:</strong> Coming Soon!</p>
-            </div>
-            <div class="fun-item">
-                <p><strong>Packing List:</strong> Coming Soon!</p>
+                <p><strong>Packing List:</strong> Coming soon!</p>
             </div>
         </nav>
     </section>
