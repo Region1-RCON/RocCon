@@ -1,196 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>RocCon</title> 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>AAS Region I RCON</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="aas.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0 20px;
-                background-color: #000000;
-            }
-    
-            header {
-                background-color: #f06b1f;
-                color: white;
-                padding: 20px;
-                margin-left: -20px;
-                margin-right: -20px;
-                text-align: center;
-            }
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px;
+            background: #F4F6F8;
+            color: #232526;
+        }
 
-            nav {
-                margin-top: 10px;
-            }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 36px;
+            width: 128px;
+            height: 128px;
+            object-fit: contain;
+        }
 
-            nav a {
-                color: white;
-                text-decoration: none;
-                margin: 0 10px;
-                font-weight: bold;
-            }
+        .logo2 {
+            position: absolute;
+            top: 20px;
+            left: 196px;
+            width: 128px;
+            height: 128px;
+            object-fit: contain;
+        }
 
-            nav a:hover {
-                text-decoration: underline;
-            }
-    
-            h1, h3, h4 {
-                margin: 10px 0;
-            }
+        .logo-right {
+            position: absolute;
+            top: 20px;
+            right: 36px;
+            width: 128px;
+            height: 128px;
+            object-fit: contain;
+        }
 
-            h3{
-                color: white;
-            }
+        .logo-right2 {
+            position: absolute;
+            top: 20px;
+            right: 196px;
+            width: 128px;
+            height: 128px;
+            object-fit: contain;
+        }
 
+        header {
+            background: #003366;
+            color: #FFFFFF;
+            height: 170px;
+            padding: 0 32px;
+            margin: 0 -20px 32px -20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 5em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+        .subtitle {
+            display: block;
+            font-size: 2em;
+            color: #FFD700;
+            font-weight: 500;
+            margin-top: -7px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        header nav {
+            margin-top: -2px;
+        }
+
+        nav a {
+            color: #C8102E;
+            text-decoration: none;
+            margin: 0 34px;
+            font-weight: 650;
+            font-size: 1.4em;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 1px;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+            border-bottom: 2px solid #FFFFFF;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            background: #FFFFFF;
+            box-shadow: 0 2px 24px rgba(0,0,0,0.07);
+            padding: 32px 24px;
+            color: #232526;
+        }
+
+        h3 {
+            color: #003366;
+            font-size: 1.5em;
+            margin-bottom: 7px;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+
+        .speakers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            padding: 16px 0;
+        }
+
+        .speaker-card {
+            background: #FFFFFF;
+            border-radius: 0;
+            padding: 24px;
+            box-shadow: 0 2px 16px rgba(0,51,160,0.08);
+            text-align: center;
+            transition: box-shadow 0.2s;
+            border: 2px solid #FFD700;
+        }
+
+        .speaker-card:hover {
+            box-shadow: 0 4px 32px rgba(200,16,46,0.18);
+        }
+
+        .speaker-card h4 {
+            font-size: 1.25em;
+            margin-bottom: 8px;
+            color: #C8102E;
+        }
+
+        .speaker-card p {
+            font-size: 1em;
+            color: #0033A0;
+        }
+
+        #important_info nav,
+        #fun_things nav,
+        #ticket_info nav,
+        #add_info nav {
+            margin-top: 10px;
+            background: #F8F8F8;
+            padding: 16px 20px;
+            border-radius: 0;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+            border-left: 4px solid #FFD700;
+        }
+
+        .fun-item {
+            margin-bottom: 18px;
+            padding-left: 8px;
+        }
+
+        .fun-detail {
+            margin: 2px 0 2px 20px;
+            color: #0033A0;
+            font-size: 0.98em;
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
             main {
-                max-width: 1200px;
-                margin: auto;
+                padding: 16px 6px;
             }
-    
-            .speakers-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                justify-content: center;
-                gap: 20px;
-                padding: 20px 0;
-            }
-    
-            .speaker-card {
-                background-color: white;
-                border-radius: 8px;
-                padding: 15px;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-                text-align: center;
-            }
-    
-            .speaker-card img {
-                width: 100%;
+            header {
                 height: auto;
-                max-height: 200px;
-                object-fit: cover;
-                border-radius: 6px;
-                margin: 10px 0;
+                padding: 16px 6px;
             }
-    
-            .speaker-card h4 {
-                font-size: 1.2em;
-                margin-bottom: 5px;
+            .speakers-container {
+                grid-template-columns: 1fr;
             }
-    
-            .speaker-card p {
-                font-size: 0.95em;
-                color: #333;
-            }
-    
-            #important_info nav,
-            #fun_things nav,
-            #ticket_info nav,
-            #add_info nav{
-                margin-top: 10px;
-                background-color: #fff;
-                padding: 10px 15px;
-                border-radius: 6px;
-                box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-            }
-            .fun-item {
-                margin-bottom: 20px;
-                padding-left: 10px;
-            }
+        }
+    </style>
 
-            .fun-detail {
-                margin: 2px 0 2px 20px;
-                color: #333;
-                font-size: 0.95em;
-            }
-    
-            /* Optional: make it responsive on smaller screens */
-            @media (max-width: 768px) {
-                .speakers-container {
-                    grid-template-columns: 1fr;
-                }
-            }
-        </style>
-
-    </head>
-    <body>
-        <header>
-            <h1>Welcome to RocCon!</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="staff.html">Staff</a>
-                <a href="speakers.html">Guest Speakers</a>
-                <a href="venue.html">Venue</a>
-            	<a href="schedule.html">Schedule</a>
-            </nav>
-        </header>
-        <main>
-
-            <section id="important_info">
-                <h3>Important Information</h3>
-                <p>
-                    <nav>
-                        <ul style="list-style-type: none;">
-                            <li><strong>Date: </strong>November 21st - 23rd, 2025</li>
-                            <li><strong>Location of the Event: </strong>Susan R. Holliday Center at the Saunders College of Business, Rochester Institute of Technology, 105 Lomb Memorial Dr, Rochester, NY 14623</li>
-                            <li><strong>Location of the Hotel: </strong>Holiday Inn Express located at 717 East Henrietta Rd, Brighton, NY 14623</li>
-                            <li><strong>Schedule: </strong>Coming Soon!</li>
-                        </ul>
-                    </nav>
-                </p>
-            </section>
-
-            <section id="ticket_info">
-                <h3>Ticket Information</h3>
-                <p>
-                    <nav>
-                        <ul style="list-style-type: none;">
-                            <li><strong>Price: </strong> Coming Soon!</li>
-                        </ul>
-                    </nav>
-                </p>
-            </section>
-            
-            <section id="guest_speakers">
-                <h3>Meet the Keynote Speaker!</h3>
-                <div class="speakers-container">
-                    <div class="speaker-card">
-                        <h4><strong>Brigadier General Gary R. Carlton II</strong></h4>
-                         <p><a href="https://www.nationalguard.mil/portals/31/Features/ngbgomo/bio/4/4107.html">Link to his biography</a></p>
-                        <p>Brig. Gen. Gary Charlton is the Assistant Adjutant General for the New York Air National Guard, overseeing over 5,800 personnel and operations across five wings and the Eastern Air Defense Sector. He began his military career in 1990 as an enlisted Fuels Systems Technician and commissioned in 2000, later becoming an F-16C pilot. A seasoned leader and combat veteran, he has held multiple command roles and completed eleven deployments. He holds a Master’s in Military Studies and has logged over 3,500 flight hours in various aircraft.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="fun_things">
-                <h3>Fun Things To Do</h3>
-                <nav>
-                    <div class="fun-item">
-                        <p><strong>Name:</strong> Mission BBQ</p>
-                        <p class="fun-detail">Description: "BBQ is their Mission" - C/Hutson</p>
-                        <p class="fun-detail">Distance: 2.3 miles</p>
-                    </div>
-                </nav>
-            </section>
-            <section id="add_info">
-                <h3>Additional Information</h3>
-                <nav>
-                    <div class="fun-item">
-                        <p><strong>Co-commanders:</strong> Aronald Air Society (AAS) Cadet Lieutenant Colonel Hutson and Mr. David Martin</p>
-                        <p class="fun-detail">Email Address: region1rcon@gmail.com</p>
-                    </div>
-                    <div class="fun-item">
-                        <p><strong>Follow us on Instagram for Updates:</strong> reg1.rcon</p>
-                    </div>
-                    <div class="fun-item">
-                        <p><strong>Welcome Packet: </strong> Coming Soon!</p>
-                    </div>
-                    <div class="fun-item">
-                        <p><strong>Packing List: </strong> Coming Soon!</p>
-                    </div>
-                </nav>
-            </section>
-        </main>
-    </body>
+</head>
+<body>
+<header>
+    <img src="aas.png" alt="AAS Logo" class="logo">
+    <img src="ar1.png" alt="AR1 Logo" class="logo2">
+    <img src="rit.png" alt="RIT Logo" class="logo-right">
+    <img src="det538.png" alt="RIT Logo" class="logo-right2">
+    <h1>RocCon</h1>
+    <span class="subtitle">AAS Region I RCON</span>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="staff.html">Staff</a>
+        <a href="speakers.html">Guest Speakers</a>
+        <a href="venue.html">Venue</a>
+        <a href="schedule.html">Schedule</a>
+    </nav>
+</header>
+<main>
+    <section id="important_info">
+        <h3>Critical Information</h3>
+        <nav>
+            <ul style="list-style-type: none;">
+                <li><strong>Date:</strong> November 21st - 23rd, 2025</li>
+                <li><strong>Location of the Event:</strong> Susan R. Holliday Center at the Saunders College of Business, Rochester Institute of Technology, 105 Lomb Memorial Dr, Rochester, NY 14623</li>
+                <li><strong>Location of the Hotel:</strong> Holiday Inn Express located at 717 East Henrietta Rd, Brighton, NY 14623</li>
+                <li><strong>Schedule:</strong> Coming Soon!</li>
+            </ul>
+        </nav>
+    </section>
+    <section id="ticket_info">
+        <h3>Ticket Information</h3>
+        <nav>
+            <ul style="list-style-type: none;">
+                <li><strong>Price:</strong> Coming Soon!</li>
+            </ul>
+        </nav>
+    </section>
+    <section id="guest_speakers">
+        <h3>Meet the Keynote Speaker!</h3>
+        <div class="speakers-container">
+            <div class="speaker-card">
+                <h4><strong>Brigadier General Gary R. Carlton II</strong></h4>
+                <p><a href="https://www.nationalguard.mil/portals/31/Features/ngbgomo/bio/4/4107.html" style="color:#f06b1f;">Link to his biography</a></p>
+                <p>Brig. Gen. Gary Charlton is the Assistant Adjutant General for the New York Air National Guard, overseeing over 5,800 personnel and operations across five wings and the Eastern Air Defense Sector. He began his military career in 1990 as an enlisted Fuels Systems Technician and commissioned in 2000, later becoming an F-16C pilot. A seasoned leader and combat veteran, he has held multiple command roles and completed eleven deployments. He holds a Master’s in Military Studies and has logged over 3,500 flight hours in various aircraft.</p>
+            </div>
+        </div>
+    </section>
+    <section id="fun_things">
+        <h3>Fun Things To Do</h3>
+        <nav>
+            <div class="fun-item">
+                <p><strong>Name:</strong> Mission BBQ</p>
+                <p class="fun-detail">Description: "BBQ is their Mission" - C/Hutson</p>
+                <p class="fun-detail">Distance: 2.3 miles</p>
+            </div>
+        </nav>
+    </section>
+    <section id="add_info">
+        <h3>Additional Information</h3>
+        <nav>
+            <div class="fun-item">
+                <p><strong>Co-commanders:</strong> Arnold Air Society (AAS) Cadet Lieutenant Colonel Hutson and Mr. David Martin</p>
+                <p class="fun-detail">Email Address: region1rcon@gmail.com</p>
+            </div>
+            <div class="fun-item">
+                <p><strong>Follow us on Instagram for Updates:</strong> reg1.rcon</p>
+            </div>
+            <div class="fun-item">
+                <p><strong>Welcome Packet:</strong> Coming Soon!</p>
+            </div>
+            <div class="fun-item">
+                <p><strong>Packing List:</strong> Coming Soon!</p>
+            </div>
+        </nav>
+    </section>
+</main>
+</body>
 </html>
