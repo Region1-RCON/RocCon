@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RocCon Staff</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px;
+            background-color: #000000;
+        }
+
+        header {
+            background-color: #f06b1f;
+            color: white;
+            padding: 20px;
+            margin-left: -20px;
+            margin-right: -20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .staff-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .staff-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .staff-card img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        .staff-card h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .staff-info p {
+            font-size: 0.95em;
+            color: #333;
+            margin: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RocCon Staff</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="staff.html">Staff</a>
+            <a href="speakers.html">Guest Speakers</a>
+            <a href="venue.html">Venue</a>
+            <a href="schedule.html">Schedule</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Meet the Team</h2>
+        <div class="staff-container">
+            <div class="staff-card">
+                <img src="staff_images/hutson.jpg" alt="Cadet Lt Col Hutson">
+                <h4>Cadet Lt Col Hutson</h4>
+                <div class="staff-info">
+                    <p><strong>Position:</strong> Co-Commander</p>
+                    <p><strong>Hometown:</strong> Rochester, NY</p>
+                    <p><strong>Major:</strong> Computer Science</p>
+                    <p><strong>Fun Fact:</strong> Aspiring Pilot</p>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <img src="staff_images/martin.jpg" alt="Mr. David Martin">
+                <h4>Mr. David Martin</h4>
+                <div class="staff-info">
+                    <p><strong>Position:</strong> Co-Commander</p>
+                    <p><strong>Hometown:</strong> TBD</p>
+                    <p><strong>Major:</strong> TBD</p>
+                    <p><strong>Fun Fact:</strong> TBD</p>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <img src="staff_images/kettavong.jpg" alt="Cadet Maj Kettavong">
+                <h4>Cadet Maj Kettavong</h4>
+                <div class="staff-info">
+                    <p><strong>Position:</strong> Vice Commander</p>
+                    <p><strong>Hometown:</strong> TBD</p>
+                    <p><strong>Major:</strong> TBD</p>
+                    <p><strong>Fun Fact:</strong> TBD</p>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <img src="staff_images/krenzel.jpg" alt="Zackery Krenzel">
+                <h4>Zackery Krenzel</h4>
+                <div class="staff-info">
+                    <p><strong>Position:</strong> Director of Operations</p>
+                    <p><strong>Hometown:</strong> TBD</p>
+                    <p><strong>Major:</strong> TBD</p>
+                    <p><strong>Fun Fact:</strong> TBD</p>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <img src="staff_images/natarajan.jpg" alt="Cadet Maj Natarajan">
+                <h4>Cadet Maj Natarajan</h4>
+                <div class="staff-info">
+                    <p><strong>Position:</strong> Director of Information Management</p>
+                    <p><strong>Hometown:</strong> TBD</p>
+                    <p><strong>Major:</strong> TBD</p>
+                    <p><strong>Fun Fact:</strong> TBD</p>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <img src="staff_images/nammalver.jpg" alt="Cadet Capt Nammalver">
+                <h4>Cadet Capt Nammalver</h4>
+                <div class="staff-info">
+                    <p><strong>Position:</strong> Director of Financial Management</p>
+                    <p><strong>Hometown:</strong> TBD</p>
+                    <p><strong>Major:</strong> TBD</p>
+                    <p><strong>Fun Fact:</strong> TBD</p>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <img src="staff_images/devens.jpg" alt="Emma Devens">
+                <h4>Emma Devens</h4>
+                <div class="staff-info">
+                    <p><strong>Position:</strong> Director of Public Affairs</p>
+                    <p><strong>Hometown:</strong> TBD</p>
+                    <p><strong>Major:</strong> TBD</p>
+                    <p><strong>Fun Fact:</strong> TBD</p>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <img src="staff_images/reichmann.jpg" alt="Cadet Capt Reichmann">
+                <h4>Cadet Capt Reichmann</h4>
+                <div class="staff-info">
+                    <p><strong>Position:</strong> Director of Support</p>
+                    <p><strong>Hometown:</strong> TBD</p>
+                    <p><strong>Major:</strong> TBD</p>
+                    <p><strong>Fun Fact:</strong> TBD</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
