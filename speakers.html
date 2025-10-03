@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RocCon Guest Speakers</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px;
+            background-color: #000000;
+        }
+
+        header {
+            background-color: #f06b1f;
+            color: white;
+            padding: 20px;
+            margin-left: -20px;
+            margin-right: -20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .speakers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .speaker-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .speaker-card img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        .speaker-card h4 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .speaker-card p {
+            font-size: 0.95em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RocCon Guest Speakers</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="staff.html">Staff</a>
+            <a href="speakers.html">Guest Speakers</a>
+            <a href="venue.html">Venue</a>
+	    <a href="schedule.html">Schedule</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Meet Our Speakers</h2>
+        <div class="speakers-container">
+            <div class="speaker-card">
+                <img src="guest_speaker_images/speaker1.jpg" alt="Speaker 1">
+                <h4>Brigadier General Gary R. Carlton II</h4>
+                <p><a href="https://www.nationalguard.mil/portals/31/Features/ngbgomo/bio/4/4107.html">View Biography</a></p>
+                <p>Assistant Adjutant General for the New York Air National Guard, overseeing over 5,800 personnel and operations across five wings and the Eastern Air Defense Sector.</p>
+            </div>
+
+            <!-- Add more speaker cards here -->
+        </div>
+    </main>
+</body>
+</html>
