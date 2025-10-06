@@ -1,0 +1,4 @@
+TODO:
+- Fun things to do (add average price and distance)
+- Why come to RocCon
+- Meet the staff?

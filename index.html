@@ -4,9 +4,11 @@
     <title>AAS Region I RCON</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="aas.ico" type="image/x-icon">
+    <link rel="icon" href="images/aas.ico" type="image/x-icon">
 
+    <!-- Main Styles -->
     <style>
+        /* General Styles */
         body {
             font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
             font-weight: 600;
@@ -16,50 +18,7 @@
             color: #232526;
         }
 
-        header h1 {
-            font-weight: 800;
-        }
-
-        .subtitle {
-            font-weight: 600;
-        }
-
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 36px;
-            width: 128px;
-            height: 128px;
-            object-fit: contain;
-        }
-
-        .logo2 {
-            position: absolute;
-            top: 20px;
-            left: 196px;
-            width: 128px;
-            height: 128px;
-            object-fit: contain;
-        }
-
-        .logo-right {
-            position: absolute;
-            top: 20px;
-            right: 36px;
-            width: 128px;
-            height: 128px;
-            object-fit: contain;
-        }
-
-        .logo-right2 {
-            position: absolute;
-            top: 20px;
-            right: 196px;
-            width: 128px;
-            height: 128px;
-            object-fit: contain;
-        }
-
+        /* Header Styles */
         header {
             background: #003366;
             color: #FFFFFF;
@@ -71,8 +30,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
-
         header h1 {
             margin: 0;
             font-size: 5em;
@@ -81,7 +40,6 @@
             color: #FFFFFF;
             text-decoration: underline;
         }
-
         .subtitle {
             display: block;
             font-size: 2em;
@@ -92,26 +50,20 @@
             letter-spacing: 1px;
         }
 
-        header nav {
-            margin-top: -2px;
+        /* Logo Styles */
+        .logo, .logo2, .logo-right, .logo-right2 {
+            position: absolute;
+            width: 128px;
+            height: 128px;
+            object-fit: contain;
+            top: 20px;
         }
+        .logo { left: 36px; }
+        .logo2 { left: 196px; }
+        .logo-right { right: 36px; }
+        .logo-right2 { right: 196px; }
 
-        nav a {
-            color: #C8102E;
-            text-decoration: none;
-            /*margin: 0 34px;*/
-            /*!*font-weight: 650;*!*/
-            /*!*font-size: 1.4em;*!*/
-            transition: color 0.2s;
-            /*border-bottom: 2px solid transparent;*/
-            /*padding-bottom: 1px;*/
-        }
-
-        nav a:hover {
-            color: #FFD700;
-            border-bottom: 2px solid #FFFFFF;
-        }
-
+        /* Main Content Styles */
         main {
             max-width: 1100px;
             margin: auto;
@@ -121,6 +73,21 @@
             color: #232526;
         }
 
+        /* Countdown Styles */
+        #countdown {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+        #countdown h4 {
+            font-size: 4em;
+            color: #C8102E;
+            margin: 0;
+            text-align: center;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        /* Section Headings */
         h3 {
             color: #003366;
             font-size: 1.5em;
@@ -129,39 +96,36 @@
             text-decoration: underline;
         }
 
+        /* Speaker Card Styles */
         .speakers-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 24px;
             padding: 16px 0;
         }
-
         .speaker-card {
             background: #FFFFFF;
-            border-radius: 0;
             padding: 24px;
             box-shadow: 0 2px 16px rgba(0,51,160,0.08);
             text-align: center;
             transition: box-shadow 0.2s;
             border: 2px solid #FFD700;
         }
-
         .speaker-card:hover {
             box-shadow: 0 4px 32px rgba(200,16,46,0.18);
         }
-
         .speaker-card h4 {
             font-size: 2em;
             margin-top: -6px;
             margin-bottom: 24px;
             color: #C8102E;
         }
-
         .speaker-card p {
             font-size: 1em;
             color: #0033A0;
         }
 
+        /* Navigation Styles */
         #important_info nav,
         #fun_things nav,
         #ticket_info nav,
@@ -171,30 +135,25 @@
             margin-top: 10px;
             background: #F8F8F8;
             padding: 16px 20px;
-            border-radius: 0;
             box-shadow: 0 1px 8px rgba(0,0,0,0.07);
             border-left: 4px solid #FFD700;
         }
 
+        /* List Styles */
+        ul {
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Fun Item Styles */
         .fun-item {
             margin-bottom: 18px;
             padding-left: 8px;
         }
 
-        .fun-detail {
-            margin: 2px 0 2px 20px;
-            color: #0033A0;
-            font-size: 0.98em;
-        }
-
-        ul {
-            padding-left: 0;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
+        /* Responsive Styles */
         @media (max-width: 768px) {
             main {
                 padding: 16px 6px;
@@ -208,25 +167,24 @@
             }
         }
     </style>
-
 </head>
 <body>
+<!-- Header Section -->
 <header>
-    <img src="aas.png" alt="AAS Logo" class="logo">
-    <img src="ar1.png" alt="AR1 Logo" class="logo2">
-    <img src="rit.png" alt="RIT Logo" class="logo-right">
-    <img src="det538.png" alt="RIT Logo" class="logo-right2">
+    <img src="images/aas.png" alt="AAS Logo" class="logo">
+    <img src="images/ar1.png" alt="AR1 Logo" class="logo2">
+    <img src="images/rit.png" alt="RIT Logo" class="logo-right">
+    <img src="images/det538.png" alt="Det 538 Logo" class="logo-right2">
     <h1>RocCon</h1>
     <span class="subtitle">AAS Region I RCON</span>
-<!--    <nav>-->
-<!--        <a href="index.html">Home</a>-->
-<!--        <a href="staff.html">Staff</a>-->
-<!--        <a href="speakers.html">Guest Speakers</a>-->
-<!--        <a href="venue.html">Venue</a>-->
-<!--        <a href="schedule.html">Schedule</a>-->
-<!--    </nav>-->
+    <!-- Navigation can be added here if needed -->
 </header>
+
 <main>
+    <!-- Countdown Timer -->
+    <div id="countdown"></div>
+
+    <!-- Critical Information Section -->
     <section id="important_info">
         <h3>Critical Information</h3>
         <nav>
@@ -237,6 +195,8 @@
             </ul>
         </nav>
     </section>
+
+    <!-- Tickets Section -->
     <section id="ticket_info">
         <h3>Tickets</h3>
         <nav>
@@ -245,16 +205,19 @@
             </ul>
         </nav>
     </section>
+
+    <!-- Guest Speakers Section -->
     <section id="guest_speakers">
         <h3>Keynote Speaker</h3>
         <div class="speakers-container">
             <div class="speaker-card">
                 <h4><strong><u>Brigadier General Gary R. Charlton II</u></strong></h4>
-                <iframe src="BGCharlton_Biography.htm" width="100%" height="600px" style="border:none;"></iframe>
-<!--                <p>Brig. Gen. Gary Charlton is the Assistant Adjutant General for the New York Air National Guard, overseeing over 5,800 personnel and operations across five wings and the Eastern Air Defense Sector. He began his military career in 1990 as an enlisted Fuels Systems Technician and commissioned in 2000, later becoming an F-16C pilot. A seasoned leader and combat veteran, he has held multiple command roles and completed eleven deployments. He holds a Master’s in Military Studies and has logged over 3,500 flight hours in various aircraft.</p>-->
+                <iframe src="charlton_bio.htm" width="100%" height="600px" style="border:none;"></iframe>
             </div>
         </div>
     </section>
+
+    <!-- Schedule Section -->
     <section id="schedule">
         <h3>Schedule</h3>
         <nav>
@@ -263,106 +226,117 @@
             </ul>
         </nav>
     </section>
+
+    <!-- Local Attractions Section -->
     <section id="fun_things">
         <h3>Local Attractions</h3>
         <nav>
             <div class="fun-item">
-                <p><strong>Name:</strong> Mission BBQ</p>
-                <p class="fun-detail">Description: "BBQ is their Mission" - C/Hutson</p>
-                <p class="fun-detail">Distance: 2.3 miles</p>
+                <strong>Food:</strong>
+                <ul style="list-style-type: disc; margin-left: 20px;">
+                    <li>Dinosaur Bar-B-Que: 99 Court St, Rochester, NY 14604</li>
+                    <li>dogTown Hots: 691 Monroe Ave, Rochester, NY 14607</li>
+                    <li>Bill Gray's: 1225 Jefferson Rd, Rochester, NY 14623</li>
+                    <li>Swillburger: 820 S Clinton Ave, Rochester, NY 14620</li>
+                    <li>Chick-fil-A: 100 Marketplace Dr Ste 200, 14623, Rochester</li>
+                </ul>
+            </div>
+            <div class="fun-item">
+                <strong>Entertainment & Attractions:</strong>
+                <ul style="list-style-type: disc; margin-left: 20px;">
+                    <li>Memorial Art Gallery: 500 University Ave, Rochester, NY 14607</li>
+                    <li>George Eastman Museum: 900 East Ave, Rochester, NY 14607</li>
+                    <li>Seneca Park Zoo: 2222 St. Paul Street, Rochester, NY 14621</li>
+                    <li>Rochester Museum & Science Center: 657 East Avenue, Rochester, NY 14607</li>
+                    <li>Nerdvana: 50 Adventure Pl, Rochester, NY 14607</li>
+                    <li>Radio Social, 20 Carlson Rd, Rochester: NY 14610</li>
+                </ul>
             </div>
         </nav>
     </section>
+
+    <!-- Staff Section -->
     <section id="staff">
         <h3>Staff</h3>
         <div class="speaker-card">
-        <div class="venue-section">
-            <table style="width:100%; border-collapse:collapse;">
-                <tr>
-                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
-                        <strong>AAS Cadet Lieutenant Colonel Hutson</strong><br>
-                        <em>Position:</em> Co-Commander<br>
-                        <em>Hometown:</em> Pompey, NY<br>
-                        <em>Major:</em> Computer Science<br>
-                        <em>Fun Fact:</em> Aspiring pilot
-                    </td>
-                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
-                        <strong>Mister David Martin</strong><br>
-                        <em>Position:</em> Co-Commander<br>
-                        <em>Hometown:</em> Woodbridge, VA<br>
-                        <em>Major:</em> MBA<br>
-                        <em>Fun Fact:</em> Bikes or runs to school every day
-                    </td>
-                </tr>
-                <tr>
-                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
-                        <strong>AAS Cadet Major Kettavong</strong><br>
-                        <em>Position:</em> Vice Commander<br>
-                        <em>Hometown:</em> TBD<br>
-                        <em>Major:</em> TBD<br>
-                        <em>Fun Fact:</em> TBD
-                    </td>
-                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
-                        <strong>Mister Zackery Krenzel</strong><br>
-                        <em>Position:</em> Director of Operations<br>
-                        <em>Hometown:</em> TBD<br>
-                        <em>Major:</em> TBD<br>
-                        <em>Fun Fact:</em> TBD
-                    </td>
-                </tr>
-                <tr>
-                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
-                        <strong>AAS Cadet Major Natarajan</strong><br>
-                        <em>Position:</em> Director of Information Management<br>
-                        <em>Hometown:</em> TBD<br>
-                        <em>Major:</em> TBD<br>
-                        <em>Fun Fact:</em> TBD
-                    </td>
-                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
-                        <strong>AAS Cadet Captain Nammalver</strong><br>
-                        <em>Position:</em> Director of Financial Management<br>
-                        <em>Hometown:</em> TBD<br>
-                        <em>Major:</em> TBD<br>
-                        <em>Fun Fact:</em> TBD
-                    </td>
-                </tr>
-                <tr>
-                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
-                        <strong>Miss Emma Devens</strong><br>
-                        <em>Position:</em> Director of Public Affairs<br>
-                        <em>Hometown:</em> TBD<br>
-                        <em>Major:</em> TBD<br>
-                        <em>Fun Fact:</em> TBD
-                    </td>
-                    <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
-                        <strong>AAS Cadet Captain Reichmann</strong><br>
-                        <em>Position:</em> Director of Support<br>
-                        <em>Hometown:</em> TBD<br>
-                        <em>Major:</em> TBD<br>
-                        <em>Fun Fact:</em> TBD
-                    </td>
-                </tr>
-            </table>
-        </div>
+            <div class="venue-section">
+                <table style="width:100%; border-collapse:collapse;">
+                    <tr>
+                        <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                            <strong>AAS Cadet Lieutenant Colonel Hutson</strong><br>
+                            <em>Position:</em> Co-Commander<br>
+                            <em>Hometown:</em> Pompey, NY<br>
+                            <em>Major:</em> Computer Science<br>
+                            <em>Fun Fact:</em> Aspiring pilot
+                        </td>
+                        <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                            <strong>Mister David Martin</strong><br>
+                            <em>Position:</em> Co-Commander<br>
+                            <em>Hometown:</em> Woodbridge, VA<br>
+                            <em>Major:</em> MBA<br>
+                            <em>Fun Fact:</em> Bikes or runs to school every day
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                            <strong>AAS Cadet Major Kettavong</strong><br>
+                            <em>Position:</em> Vice Commander<br>
+                            <em>Hometown:</em> TBD<br>
+                            <em>Major:</em> TBD<br>
+                            <em>Fun Fact:</em> TBD
+                        </td>
+                        <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                            <strong>Mister Zackery Krenzel</strong><br>
+                            <em>Position:</em> Director of Operations<br>
+                            <em>Hometown:</em> TBD<br>
+                            <em>Major:</em> TBD<br>
+                            <em>Fun Fact:</em> TBD
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                            <strong>AAS Cadet Major Natarajan</strong><br>
+                            <em>Position:</em> Director of Information Management<br>
+                            <em>Hometown:</em> TBD<br>
+                            <em>Major:</em> TBD<br>
+                            <em>Fun Fact:</em> TBD
+                        </td>
+                        <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                            <strong>AAS Cadet Captain Nammalver</strong><br>
+                            <em>Position:</em> Director of Financial Management<br>
+                            <em>Hometown:</em> TBD<br>
+                            <em>Major:</em> TBD<br>
+                            <em>Fun Fact:</em> TBD
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                            <strong>Miss Emma Devens</strong><br>
+                            <em>Position:</em> Director of Public Affairs<br>
+                            <em>Hometown:</em> TBD<br>
+                            <em>Major:</em> TBD<br>
+                            <em>Fun Fact:</em> TBD
+                        </td>
+                        <td style="vertical-align:top; padding:15px; border:2px solid #FFD700; border-radius:8px;">
+                            <strong>AAS Cadet Captain Reichmann</strong><br>
+                            <em>Position:</em> Director of Support<br>
+                            <em>Hometown:</em> TBD<br>
+                            <em>Major:</em> TBD<br>
+                            <em>Fun Fact:</em> TBD
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </section>
 
-
-    <!--    <section id="venue">-->
-<!--        <h3>Venue</h3>-->
-<!--        <nav>-->
-<!--            <ul style="list-style-type: none;">-->
-<!--                <li><strong>Susan R. Holliday Center</strong></li>-->
-<!--                <li>Saunders College of Business, Rochester Institute of Technology</li>-->
-<!--                <li>105 Lomb Memorial Dr, Rochester, NY 14623</li>-->
-<!--            </ul>-->
-<!--        </nav>-->
-<!--    </section>-->
+    <!-- Additional Information Section -->
     <section id="add_info">
         <h3>Additional Information</h3>
         <nav>
             <div class="fun-item">
-                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/reg1.rcon" target="_blank" rel="noopener noreferrer"><u>reg1.rcon</u></a></p>            </div>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/reg1.rcon" target="_blank" rel="noopener noreferrer"><u>reg1.rcon</u></a></p>
+            </div>
             <div class="fun-item">
                 <p><strong>Welcome Packet:</strong> Coming soon!</p>
             </div>
@@ -372,5 +346,43 @@
         </nav>
     </section>
 </main>
+
+<!-- Countdown Script (deferred for performance) -->
+<script defer>
+    // Countdown to Nov 21 of current year
+    // Cache the countdown element
+    const countdownEl = document.getElementById('countdown');
+    let lastText = '';
+    let intervalId = null;
+
+    function updateCountdown() {
+        const now = new Date();
+        const target = new Date(now.getFullYear(), 10, 21, 0, 0, 0); // November is month 10
+        const diff = target - now;
+
+        let text;
+        if (diff <= 0) {
+            text = "It's November 21!";
+            if (intervalId) clearInterval(intervalId); // Stop updates
+        } else {
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+            text = `${days}d ${hours}h ${minutes}m ${seconds}s until RCON!`;
+        }
+
+        // Only update DOM if text changed
+        if (text !== lastText) {
+            countdownEl.innerHTML = `<h4><strong><u>${text}</u></strong></h4>`;
+            lastText = text;
+        }
+    }
+
+    // Start interval and store its ID
+    intervalId = setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+</script>
 </body>
 </html>
