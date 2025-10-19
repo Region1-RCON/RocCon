@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>AAS Region I RCON</title>
+    <title>Region I RCON</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/aas.ico" type="image/x-icon">
+<!--    <link rel="icon" href="images/aas.ico" type="image/x-icon">-->
 
     <!-- Main Styles -->
     <style>
@@ -42,7 +42,7 @@
         }
         .subtitle {
             display: block;
-            font-size: 2em;
+            font-size: 1.65em;
             color: #FFD700;
             font-weight: 500;
             margin-top: -7px;
@@ -53,15 +53,15 @@
         /* Logo Styles */
         .logo, .logo2, .logo-right, .logo-right2 {
             position: absolute;
-            width: 128px;
             height: 128px;
+            width: auto;
             object-fit: contain;
             top: 20px;
         }
         .logo { left: 36px; }
-        .logo2 { left: 196px; }
+        .logo2 { left: 280px; }
         .logo-right { right: 36px; }
-        .logo-right2 { right: 196px; }
+        .logo-right2 { right: 190px; }
 
         /* Main Content Styles */
         main {
@@ -171,12 +171,12 @@
 <body>
 <!-- Header Section -->
 <header>
-    <img src="images/aas.png" alt="AAS Logo" class="logo">
+    <img src="images/aassw.png" alt="AAS-SW Logo" class="logo">
     <img src="images/ar1.png" alt="AR1 Logo" class="logo2">
     <img src="images/rit.png" alt="RIT Logo" class="logo-right">
     <img src="images/det538.png" alt="Det 538 Logo" class="logo-right2">
     <h1>RocCon</h1>
-    <span class="subtitle">AAS Region I RCON</span>
+    <span class="subtitle">AAS-SW Region I RCON</span>
     <!-- Navigation can be added here if needed -->
 </header>
 
@@ -403,12 +403,12 @@
 
     function updateCountdown() {
         const now = new Date();
-        const target = new Date(now.getFullYear(), 10, 21, 0, 0, 0); // November is month 10
+        const target = new Date(now.getFullYear(), 10, 22, 8, 0, 0); // November is month 10
         const diff = target - now;
 
         let text;
         if (diff <= 0) {
-            text = "It's November 21!";
+            text = "RCON Has Begun!";
             if (intervalId) clearInterval(intervalId); // Stop updates
         } else {
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
